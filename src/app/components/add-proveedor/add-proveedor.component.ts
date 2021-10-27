@@ -16,13 +16,18 @@ export class AddProveedorComponent implements OnInit {
   distritos: Ubigeo[] = [];
 
   proveedor: Proveedor = {
+    razonsocial: '',
+    ruc: '',
     ubigeo: {
-      idUbigeo: -1,
+      idUbigeo: 0,
       departamento: '-1',
       provincia: '-1',
-      distrito: '',
+      distrito: '0',
     },
   };
+
+  proveedores: Proveedor[] = [];
+
   constructor(
     private ubigeoService: UbigeoService,
     private proveedorService: ProveedorService
@@ -30,6 +35,17 @@ export class AddProveedorComponent implements OnInit {
     this.ubigeoService
       .listarDepartamento()
       .subscribe((departamentos) => (this.departamentos = departamentos));
+  }
+
+  consultaProveedor() {
+    console.log(this.proveedor);
+    this.proveedorService
+      .consultaProveedor(
+        this.proveedor.razonsocial!,
+        this.proveedor.ruc!,
+        this.proveedor.ubigeo?.idUbigeo!
+      )
+      .subscribe((response) => (this.proveedores = response.lista));
   }
 
   registroProveedor() {

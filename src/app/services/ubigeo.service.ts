@@ -4,7 +4,7 @@ import { Observable } from 'rxjs';
 import { Ubigeo } from '../models/ubigeo.model';
 
 
-const baseUrl = 'http://localhost:8090/rest/lista';
+const baseUrl = 'http://localhost:8090/url/lista';
 
 @Injectable({
   providedIn: 'root'

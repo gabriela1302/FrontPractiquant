@@ -15,7 +15,7 @@ const routes: Routes = [
   {path:"addMarca", component:AddMarcaComponent },
   {path:"addProducto", component:AddProductoComponent },
   {path:"addProveedor", component:AddProveedorComponent },
-  {path:"addReclamo", component:AddReclamoComponent },
+  {path:"consultaReclamo", component:AddReclamoComponent },
   {path:"addSede", component:AddSedeComponent },
   {path:"addUsuario", component:AddUsuarioComponent },
 ];

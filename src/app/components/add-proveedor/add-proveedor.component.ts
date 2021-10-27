@@ -9,6 +9,7 @@ import { UbigeoService } from 'src/app/services/ubigeo.service';
   templateUrl: './add-proveedor.component.html',
   styleUrls: ['./add-proveedor.component.css'],
 })
+//Ejemplo
 export class AddProveedorComponent implements OnInit {
   departamentos: string[] = [];
   provincias: string[] = [];

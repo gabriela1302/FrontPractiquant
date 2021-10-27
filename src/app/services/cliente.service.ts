@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Cliente } from '../models/cliente.model';
 
-const baseUrl = 'http://localhost:8090/url/cliente/registraCliente';
+const baseUrl = 'http://localhost:8090/url/cliente';
 
 @Injectable({
   providedIn: 'root'
@@ -13,7 +13,7 @@ export class ClienteService {
   constructor(private http: HttpClient) { }
 
   registrar(data: Cliente): Observable<Cliente>{
-    return this.http.post(baseUrl, data);
+    return this.http.post(baseUrl + "/registraCliente", data);;
   }
 
   consultaCliente(nombres: string, apellidos: string ,ubi: number): Observable<any>{

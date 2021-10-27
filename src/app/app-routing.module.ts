@@ -8,10 +8,12 @@ import { AddProveedorComponent } from './components/add-proveedor/add-proveedor.
 import { AddReclamoComponent } from './components/add-reclamo/add-reclamo.component';
 import { AddSedeComponent } from './components/add-sede/add-sede.component';
 import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
+import { FormConsultaComponent } from './components/add-cliente/form-consulta.component';
 
 
 const routes: Routes = [
   {path:"addCliente", component:AddClienteComponent },
+  {path:"addCliente/consultaCliente", component:FormConsultaComponent},
   {path:"addMarca", component:AddMarcaComponent },
   {path:"addProducto", component:AddProductoComponent },
   {path:"addProveedor", component:AddProveedorComponent },

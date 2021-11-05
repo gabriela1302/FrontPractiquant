@@ -1,8 +1,7 @@
 import { Ubigeo } from "./ubigeo.model";
 
 export class Cliente {
-
-    idCliente?: number;
+  idCliente?: number;
 	nombres?: string;
 	apellidos?: string;
 	correo?: string;
@@ -10,5 +9,7 @@ export class Cliente {
 	direccion?: string;
 	estado?: number;
     ubigeo?:Ubigeo;
+    nombreCompleto?:string;
 
 }
+

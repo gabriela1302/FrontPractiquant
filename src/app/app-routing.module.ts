@@ -10,16 +10,28 @@ import { AddSedeComponent } from './components/add-sede/add-sede.component';
 import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
 import { FormConsultaComponent } from './components/add-cliente/form-consulta.component';
 
+import { CrudClienteComponent } from './components/crud-cliente/crud-cliente.component';
+import { CrudProveedorComponent } from './components/crud-proveedor/crud-proveedor.component';
+import { CrudReclamoComponent } from './components/crud-reclamo/crud-reclamo.component';
+
 
 const routes: Routes = [
   {path:"addCliente", component:AddClienteComponent },
-  {path:"addCliente/consultaCliente", component:FormConsultaComponent},
-  {path:"addMarca", component:AddMarcaComponent },
+   {path:"addMarca", component:AddMarcaComponent },
   {path:"addProducto", component:AddProductoComponent },
   {path:"addProveedor", component:AddProveedorComponent },
-  {path:"consultaReclamo", component:AddReclamoComponent },
   {path:"addSede", component:AddSedeComponent },
   {path:"addUsuario", component:AddUsuarioComponent },
+
+  {path:"consultaReclamo", component:AddReclamoComponent },
+  {path:"addCliente/consultaCliente", component:FormConsultaComponent},
+
+  
+  {path:"crudCliente", component:CrudClienteComponent },
+  {path:"crudProveedor", component:CrudProveedorComponent },
+  {path:"crudReclamo", component:CrudReclamoComponent },
+  
+
 ];
 
 

@@ -13,6 +13,9 @@ import { AddReclamoComponent } from './components/add-reclamo/add-reclamo.compon
 import { AddSedeComponent } from './components/add-sede/add-sede.component';
 import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
 import { FormConsultaComponent } from './components/add-cliente/form-consulta.component';
+import { CrudClienteComponent } from './components/crud-cliente/crud-cliente.component';
+import { CrudProveedorComponent } from './components/crud-proveedor/crud-proveedor.component';
+import { CrudReclamoComponent } from './components/crud-reclamo/crud-reclamo.component';
 
 
 @NgModule({
@@ -25,7 +28,10 @@ import { FormConsultaComponent } from './components/add-cliente/form-consulta.co
     AddReclamoComponent,
     AddSedeComponent,
     AddUsuarioComponent,
-    FormConsultaComponent
+    FormConsultaComponent,
+    CrudClienteComponent,
+    CrudProveedorComponent,
+    CrudReclamoComponent
   ],
   imports: [
     BrowserModule,

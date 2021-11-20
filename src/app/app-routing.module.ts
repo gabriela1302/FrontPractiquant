@@ -9,7 +9,7 @@ import { AddReclamoComponent } from './components/add-reclamo/add-reclamo.compon
 import { AddSedeComponent } from './components/add-sede/add-sede.component';
 import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
 import { FormConsultaComponent } from './components/add-cliente/form-consulta.component';
-
+import { ConsultaProveedorComponent}from './components/consulta-proveedor/consulta-proveedor.component';
 import { CrudClienteComponent } from './components/crud-cliente/crud-cliente.component';
 import { CrudProveedorComponent } from './components/crud-proveedor/crud-proveedor.component';
 import { CrudReclamoComponent } from './components/crud-reclamo/crud-reclamo.component';
@@ -22,7 +22,7 @@ const routes: Routes = [
   {path:"addProveedor", component:AddProveedorComponent },
   {path:"addSede", component:AddSedeComponent },
   {path:"addUsuario", component:AddUsuarioComponent },
-
+  {path:"consultaProveedor", component:ConsultaProveedorComponent },
   {path:"consultaReclamo", component:AddReclamoComponent },
   {path:"addCliente/consultaCliente", component:FormConsultaComponent},
 

@@ -5,12 +5,11 @@ import { ProveedorService } from 'src/app/services/proveedor.service';
 import { UbigeoService } from 'src/app/services/ubigeo.service';
 
 @Component({
-  selector: 'app-add-proveedor',
-  templateUrl: './add-proveedor.component.html',
-  styleUrls: ['./add-proveedor.component.css'],
+  selector: 'app-consulta-proveedor',
+  templateUrl: './consulta-proveedor.component.html',
+  styleUrls: ['./consulta-proveedor.component.css'],
 })
-//Ejemplo
-export class AddProveedorComponent implements OnInit {
+export class ConsultaProveedorComponent implements OnInit {
   departamentos: string[] = [];
   provincias: string[] = [];
   distritos: Ubigeo[] = [];
@@ -27,7 +26,6 @@ export class AddProveedorComponent implements OnInit {
   };
 
   proveedores: Proveedor[] = [];
-
   constructor(
     private ubigeoService: UbigeoService,
     private proveedorService: ProveedorService
@@ -37,17 +35,17 @@ export class AddProveedorComponent implements OnInit {
       .subscribe((departamentos) => (this.departamentos = departamentos));
   }
 
-  registroProveedor() {
+  ngOnInit(): void {}
+
+  consultaProveedor() {
     console.log(this.proveedor);
-    this.proveedorService.registroProveedor(this.proveedor).subscribe(
-      (response) => {
-        console.log(response.mensaje);
-        alert(response.mensaje);
-      },
-      (error) => {
-        console.log(error);
-      }
-    );
+    this.proveedorService
+      .consultaProveedor(
+        this.proveedor.razonsocial!,
+        this.proveedor.ruc!,
+        this.proveedor.ubigeo?.idUbigeo!
+      )
+      .subscribe((response) => (this.proveedores = response.lista));
   }
 
   listaProvincia() {
@@ -64,6 +62,4 @@ export class AddProveedorComponent implements OnInit {
       )
       .subscribe((distritos) => (this.distritos = distritos));
   }
-
-  ngOnInit(): void {}
 }

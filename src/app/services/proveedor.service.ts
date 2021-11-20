@@ -4,6 +4,8 @@ import { Observable } from 'rxjs';
 import { Proveedor } from '../models/proveedor.model';
 
 const baseUrl = 'http://localhost:8090/rest/proveedor';
+
+const baseUrlCRUD = 'http://localhost:8090/rest/crudProveedor';
 @Injectable({
   providedIn: 'root',
 })
@@ -27,5 +29,19 @@ export class ProveedorService {
     return this.http.get(baseUrl + '/porRazonRucUbigeoConParametros', {
       params,
     });
+  }
+
+  consulta(filtro: string): Observable<Proveedor[]> {
+    return this.http.get<Proveedor[]>(
+      baseUrlCRUD + '/listaProveedorPorNombreLike/' + filtro
+    );
+  }
+
+  registra(aux: Proveedor): Observable<any> {
+    return this.http.post<any>(baseUrlCRUD + '/registraProveedor', aux);
+  }
+
+  actualiza(aux: Proveedor): Observable<any> {
+    return this.http.put<any>(baseUrlCRUD + '/actualizaProveedor', aux);
   }
 }

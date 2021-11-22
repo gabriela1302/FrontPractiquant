@@ -17,6 +17,7 @@ import { CrudClienteComponent } from './components/crud-cliente/crud-cliente.com
 import { CrudProveedorComponent } from './components/crud-proveedor/crud-proveedor.component';
 import { CrudReclamoComponent } from './components/crud-reclamo/crud-reclamo.component';
 import { ConsultaProveedorComponent } from './components/consulta-proveedor/consulta-proveedor.component';
+import { RegistraReclamoComponent } from './components/registra-reclamo/registra-reclamo.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { ConsultaProveedorComponent } from './components/consulta-proveedor/cons
     CrudClienteComponent,
     CrudProveedorComponent,
     CrudReclamoComponent,
-    ConsultaProveedorComponent
+    ConsultaProveedorComponent,
+    RegistraReclamoComponent
   ],
   imports: [
     BrowserModule,

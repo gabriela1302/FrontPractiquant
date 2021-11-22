@@ -13,6 +13,7 @@ import { ConsultaProveedorComponent}from './components/consulta-proveedor/consul
 import { CrudClienteComponent } from './components/crud-cliente/crud-cliente.component';
 import { CrudProveedorComponent } from './components/crud-proveedor/crud-proveedor.component';
 import { CrudReclamoComponent } from './components/crud-reclamo/crud-reclamo.component';
+import { RegistraReclamoComponent } from './components/registra-reclamo/registra-reclamo.component';
 
 
 const routes: Routes = [
@@ -25,11 +26,11 @@ const routes: Routes = [
   {path:"consultaProveedor", component:ConsultaProveedorComponent },
   {path:"consultaReclamo", component:AddReclamoComponent },
   {path:"addCliente/consultaCliente", component:FormConsultaComponent},
-
   
   {path:"crudCliente", component:CrudClienteComponent },
   {path:"crudProveedor", component:CrudProveedorComponent },
   {path:"crudReclamo", component:CrudReclamoComponent },
+  {path:"addReclamo", component:RegistraReclamoComponent },
   
 
 ];

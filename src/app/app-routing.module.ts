@@ -1,7 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { AddProductoComponent } from './components/add-producto/add-producto.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { PostulacionComponent } from './components/postulacion/postulacion.component';
 import { PracticaComponent } from './components/practica/practica.component';
@@ -11,7 +10,6 @@ import { CrudPracticaComponent } from './components/crud-practica/crud-practica.
 
 
 const routes: Routes = [
-  {path:"addProducto", component:AddProductoComponent },
   {path:"perfil", component:PerfilComponent },
    {path:"postulacion", component:PostulacionComponent },
   {path:"practica", component:PracticaComponent },

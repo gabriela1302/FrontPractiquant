@@ -5,7 +5,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddProductoComponent } from './components/add-producto/add-producto.component';
 import { PerfilComponent } from './components/perfil/perfil.component';
 import { PostulacionComponent } from './components/postulacion/postulacion.component';
 import { PracticaComponent } from './components/practica/practica.component';
@@ -17,7 +16,6 @@ import { CrudPerfilComponent } from './components/crud-perfil/crud-perfil.compon
 @NgModule({
   declarations: [
     AppComponent,
-    AddProductoComponent,
     PerfilComponent,
     PostulacionComponent,
     PracticaComponent,

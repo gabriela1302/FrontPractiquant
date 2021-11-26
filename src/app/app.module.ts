@@ -5,37 +5,25 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { AddClienteComponent } from './components/add-cliente/add-cliente.component';
-import { AddMarcaComponent } from './components/add-marca/add-marca.component';
 import { AddProductoComponent } from './components/add-producto/add-producto.component';
-import { AddProveedorComponent } from './components/add-proveedor/add-proveedor.component';
-import { AddReclamoComponent } from './components/add-reclamo/add-reclamo.component';
-import { AddSedeComponent } from './components/add-sede/add-sede.component';
-import { AddUsuarioComponent } from './components/add-usuario/add-usuario.component';
-import { FormConsultaComponent } from './components/add-cliente/form-consulta.component';
-import { CrudClienteComponent } from './components/crud-cliente/crud-cliente.component';
-import { CrudProveedorComponent } from './components/crud-proveedor/crud-proveedor.component';
-import { CrudReclamoComponent } from './components/crud-reclamo/crud-reclamo.component';
-import { ConsultaProveedorComponent } from './components/consulta-proveedor/consulta-proveedor.component';
-import { RegistraReclamoComponent } from './components/registra-reclamo/registra-reclamo.component';
+import { PerfilComponent } from './components/perfil/perfil.component';
+import { PostulacionComponent } from './components/postulacion/postulacion.component';
+import { PracticaComponent } from './components/practica/practica.component';
+import { CrudPracticaComponent } from './components/crud-practica/crud-practica.component';
+import { CrudPostulacionComponent } from './components/crud-postulacion/crud-postulacion.component';
+import { CrudPerfilComponent } from './components/crud-perfil/crud-perfil.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddClienteComponent,
-    AddMarcaComponent,
     AddProductoComponent,
-    AddProveedorComponent,
-    AddReclamoComponent,
-    AddSedeComponent,
-    AddUsuarioComponent,
-    FormConsultaComponent,
-    CrudClienteComponent,
-    CrudProveedorComponent,
-    CrudReclamoComponent,
-    ConsultaProveedorComponent,
-    RegistraReclamoComponent
+    PerfilComponent,
+    PostulacionComponent,
+    PracticaComponent,
+    CrudPracticaComponent,
+    CrudPostulacionComponent,
+    CrudPerfilComponent,
   ],
   imports: [
     BrowserModule,

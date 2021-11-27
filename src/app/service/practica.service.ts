@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Practica } from '../models/practica.model';
 
-const baseURL = "http://localhost:8080/practiquant/practicas"
+const baseURL = "http://localhost:8090/practiquant/practicas"
 @Injectable({
   providedIn: 'root'
 })
@@ -18,16 +18,16 @@ export class PracticaService {
   consultaPractica(filtro:String):Observable<Practica[]>{
     if(filtro.trim()==''){
 
-      return this.http.get<Practica[]>(baseURL+"/listarPostulacionPorDetalleLike/todos");
+      return this.http.get<Practica[]>(baseURL+"/listaPracticaPorDetalleLike/todos");
 
     } else {
-      return this.http.get<Practica[]>(baseURL+"/listarPostulacionPorDetalleLike/"+filtro);
+      return this.http.get<Practica[]>(baseURL+"/listaPracticaPorDetalleLike/"+filtro);
     }
   }
 
 
   actualizaPractica(aux:Practica):Observable<any>{
-    return this.http.put<any>(baseURL+"/actualizaPostulacion",aux)
+    return this.http.put<any>(baseURL+"/actualizaPractica",aux)
   }
 
 

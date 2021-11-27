@@ -22,7 +22,7 @@ export class CrudpracticaComponent implements OnInit {
      codpractica:0,
      detallepractica:"",
      requisitopractica:"",
-     fechatermino:new Date(),
+    // fechatermino:new Date(),
      codperfil:{
        codperfil:0
      }, 
@@ -72,19 +72,19 @@ export class CrudpracticaComponent implements OnInit {
           var aux:string = this.filtro.trim() == ''? "todos" : this.filtro.trim();
           this.practicaService.consultaPractica(aux).subscribe(
 
-             reponse => this.practicas = response
+             response => this.practicas = response
 
 
           );
 
           this.practica = {
            
-            codpractica:0,
+          
             detallepractica:"",
             requisitopractica:"",
-            fechatermino:new Date(),
+            //fechatermino:new Date(),
             codperfil:{
-              codperfil:0
+              codperfil:-1
             }, 
        
             estado:0
@@ -144,28 +144,16 @@ export class CrudpracticaComponent implements OnInit {
 
        );
 
-       this.practica = {
-           
-        codpractica:0,
-        detallepractica:"",
-        requisitopractica:"",
-        fechatermino:new Date(),
-        codperfil:{
-          codperfil:0
-        }, 
-   
-        estado:1
-   
-      }
-
-
+       (error) =>{
+        console.log(error);
+      };
       }
 
     );
 
   }
 
-   actualizaPractica(){
+   actualiza(){
     console.log("==> registra ==> filtro ==> " + this.practica.codperfil);
     console.log("==> registra ==> detallepractica ==> "+ this.practica.detallepractica);
     console.log("==> registra ==>  fechafin => "+ this.practica.fechatermino);

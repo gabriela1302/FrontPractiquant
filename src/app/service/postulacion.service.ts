@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Postulacion } from '../models/postulacion.model';
 
-const baseURL = "http://localhost:8080/practiquant/postulacion"
+const baseURL = "http://localhost:8090/practiquant/postulacion"
 @Injectable({
   providedIn: 'root'
 })
@@ -21,7 +21,7 @@ export class PostulacionService {
       if(filtro.trim() == ''){
         return this.http.get<Postulacion[]>(baseURL+"/listarPostulacionPorDetalleLike/todos");
       }else {
-        return this.http.get<Postulacion[]>(baseURL+"/listarPostulacionPorDetalleLike"+filtro);
+        return this.http.get<Postulacion[]>(baseURL+"/listarPostulacionPorDetalleLike/"+filtro);
       }
     }
 

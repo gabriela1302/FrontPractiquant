@@ -10,6 +10,7 @@ import { TokenService } from 'src/app/service/token.service';
 })
 export class CrudperfilComponent implements OnInit {
 
+  constructor(private perfilService: PerfilService, private tokenService: TokenService) { }
 
   perfiles: Perfil[] = [];
   filtro: string = "";
@@ -20,7 +21,6 @@ export class CrudperfilComponent implements OnInit {
     codperfil: 0,
     nombre: "",
     apellido: "",
-    fnacim: new Date(),
     resumen: "",
     estado: 0,
 
@@ -38,8 +38,8 @@ export class CrudperfilComponent implements OnInit {
 
   registra() {
     console.log(" ==> registra ==> filtro ==> " + this.perfil.codperfil);
-    console.log(" ==> registra ==> Descripcion ==> " + this.perfil.nombre);
-    console.log(" ==> registra ==> FechaRegistro ==> " + this.perfil.apellido);
+    console.log(" ==> registra ==> nombre ==> " + this.perfil.nombre);
+    console.log(" ==> registra ==> apellido ==> " + this.perfil.apellido);
 
     this.perfil.estado = 1;
 
@@ -79,110 +79,102 @@ export class CrudperfilComponent implements OnInit {
 
   }
 
-  getEstado(estado:number):string{
-     if(estado == 0) {
+  getEstado(estado: number): string {
+    if (estado == 1) {
       return "ACTIVO";
-    }else {
+    } else {
       return "INACTIVO";
     }
 
 
   }
 
-  getTextoBoton(estado:number):string{
-    if(estado == 0){
+  getTextoBoton(estado: number): string {
+    if (estado == 0) {
       return "ACTIVAR";
-    }else{
+    } else {
       return "DESACTIVAR"
     }
 
   }
 
-  actualizaEstado(auxPerfil: Perfil){
-    auxPerfil.estado = auxPerfil.estado == 1 ? 0 :1;
+  actualizaEstado(aux: Perfil) {
+    console.log(' ==> En actualizaEstado() ');
 
-    this.perfilService.actualizaPerfil(auxPerfil).subscribe(
+    this.perfil = aux;
+    this.perfil.estado = aux.estado == 1 ? 0 : 1;
 
-       response => {
-
-         var aux:string = this.filtro.trim()== ''? "todos" : this.filtro.trim();
-
-         this.perfilService.consultaPerfil(aux).subscribe(
-
-          response => this.perfiles = response
-
-         ); 
-
-         this.perfil ={
-          codperfil: 0,
-          nombre: "",
-          apellido: "",
-          fnacim: new Date(),
-          resumen: "",
-          estado: 0,
-
-
-
-        };
-
-
-       }
-
-
-    );
-
-   }
-
-   actualiza(){
-
-
-    console.log(" ==> registra ==> filtro ==> " + this.perfil.codperfil);
-    console.log(" ==> registra ==> Descripcion ==> " + this.perfil.nombre);
-    console.log(" ==> registra ==> FechaRegistro ==> " + this.perfil.apellido);
-    
-     
     this.perfilService.actualizaPerfil(this.perfil).subscribe(
+      (response) => {
+        console.log(response.mensaje);
+        var aux: string = this.filtro.trim() == '' ? 'todos' : this.filtro.trim();
 
-       response => {
-         alert(response.mensaje);
-
-         var aux:string = this.filtro.trim()== ''? "todos" : this.filtro.trim();
-
-         this.perfilService.consultaPerfil(aux).subscribe(
-
-          response => this.perfiles = response
-
-         ); 
-
-         this.perfil ={
-
-          codperfil: 0,
-          nombre: "",
-          apellido: "",
-          fnacim: new Date(),
-          resumen: "",
-          estado: 0,
+        this.perfilService
+          .consultaPerfil(aux)
+          .subscribe((response) => (this.perfiles = response));
 
 
-        };
 
+        (error) => {
+          console.log(error);
+        }
 
-       }
-
-
+      }
     );
-
-   }
-
-
-
-  busca(aux:Perfil){
-    console.log(" ==> busca ==> codpostulacion ==> " + aux.codperfil);
-
-    this.perfil = aux; 
   }
 
-  constructor(private perfilService: PerfilService, private tokenService: TokenService) { }
+
+
+
+
+
+
+  actualiza() {
+
+
+    console.log(" ==> actualiza ==> codperfil ==> " + this.perfil.codperfil);
+    console.log(" ==> actualiza ==> nombre ==> " + this.perfil.nombre);
+    console.log(" ==> actualiza ==> apellido ==> " + this.perfil.apellido);
+
+
+    this.perfilService.actualizaPerfil(this.perfil).subscribe(
+
+      response => {
+        alert(response.mensaje);
+
+        var aux: string = this.filtro.trim() == '' ? "todos" : this.filtro.trim();
+
+        this.perfilService.consultaPerfil(aux).subscribe(
+
+          response => this.perfiles = response
+
+        );
+        this.perfil = {
+          codperfil: 0,
+          nombre: "",
+          apellido: "",
+          resumen: "",
+          estado: 1
+
+        }
+
+
+
+      }
+
+
+    );
+
+  }
+
+
+
+  busca(aux: Perfil) {
+    console.log(" ==> busca ==> codpostulacion ==> " + aux.codperfil);
+
+    this.perfil = aux;
+  }
+
 
   ngOnInit() {
   }

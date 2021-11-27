@@ -19,6 +19,12 @@ import { LoginComponent } from './auth/login.component';
 import { RegistroComponent } from './auth/registro.component';
 import { MenuComponent } from './menu/menu.component';
 import { IndexComponent } from './index/index.component';
+import { CrudpracticaComponent } from './components/crudpractica/crudpractica.component';
+import { CrudperfilComponent } from './components/crudperfil/crudperfil.component';
+import { CrudpostulacionComponent } from './components/crudpostulacion/crudpostulacion.component';
+import { AddperfilComponent } from './components/addperfil/addperfil.component';
+import { AddpostulacionComponent } from './components/addpostulacion/addpostulacion.component';
+import { AddpracticaComponent } from './components/addpractica/addpractica.component';
 
 
 @NgModule({
@@ -31,7 +37,13 @@ import { IndexComponent } from './index/index.component';
     LoginComponent,
     RegistroComponent,
     MenuComponent,
-    IndexComponent
+    IndexComponent,
+    CrudpracticaComponent,
+    CrudperfilComponent,
+    CrudpostulacionComponent,
+    AddperfilComponent,
+    AddpostulacionComponent,
+    AddpracticaComponent
   ],
   imports: [
     BrowserModule,

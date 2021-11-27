@@ -111,14 +111,17 @@ export class CrudperfilComponent implements OnInit {
 
         this.perfilService
           .consultaPerfil(aux)
-          .subscribe((response) => (this.perfiles = response));
-
-
-
+          .subscribe(response => this.perfiles = response);
+          this.perfil = {
+            codperfil: 0,
+            nombre: "",
+            apellido: "",
+            resumen: "",
+            estado: 1
+          },
         (error) => {
           console.log(error);
         }
-
       }
     );
   }
@@ -144,25 +147,18 @@ export class CrudperfilComponent implements OnInit {
 
         var aux: string = this.filtro.trim() == '' ? "todos" : this.filtro.trim();
 
-        this.perfilService.consultaPerfil(aux).subscribe(
-
-          response => this.perfiles = response
-
-        );
+        this.perfilService
+          .consultaPerfil(aux)
+          .subscribe(response => this.perfiles = response);
         this.perfil = {
           codperfil: 0,
           nombre: "",
           apellido: "",
+          fnacim: new Date(),
           resumen: "",
           estado: 1
-
         }
-
-
-
       }
-
-
     );
 
   }

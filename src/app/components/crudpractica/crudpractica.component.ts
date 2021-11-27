@@ -135,15 +135,28 @@ export class CrudpracticaComponent implements OnInit {
     auxPractica.estado = auxPractica.estado == 1 ? 0 :1;
 
     this.practicaService.actualizaPractica(auxPractica).subscribe(
+
+
+      /*response => {
+      console.log(response.mensaje);
+      var aux: string = this.filtro.trim() == '' ? 'todos' : this.filtro.trim();
+      this.postulacionService
+        .consultaPostulacion(aux)
+        .subscribe((response) => (this.postulaciones = response));
+        
+        (error) =>{
+          console.log(error);
+        };
+    }*/ 
      
       response => {
+        console.log(response.mensaje);
         var aux:string = this.filtro.trim() == ''? "todos" : this.filtro.trim();
 
-       this.practicaService.consultaPractica(aux).subscribe(
-        response => this.practicas = response
-
-       );
-
+       this.practicaService
+       .consultaPractica(aux)
+       .subscribe((response) => (this.practicas = response) );
+       
        (error) =>{
         console.log(error);
       };
@@ -152,7 +165,7 @@ export class CrudpracticaComponent implements OnInit {
     );
 
   }
-
+    
    actualiza(){
     console.log("==> registra ==> filtro ==> " + this.practica.codperfil);
     console.log("==> registra ==> detallepractica ==> "+ this.practica.detallepractica);

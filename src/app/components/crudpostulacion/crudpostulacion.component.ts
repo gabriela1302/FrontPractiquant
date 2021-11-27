@@ -43,6 +43,7 @@ export class CrudpostulacionComponent implements OnInit {
   postulacion: Postulacion ={
     codpostulacion: 0,
      detallepostulante: "",
+     fechapostulacion: new Date(),
      codpractica:{
       codpractica:0
      },
@@ -70,6 +71,7 @@ registra(){
       );
       this.postulacion = {
         detallepostulante: "",
+        fechapostulacion: new Date(),
         codpractica:{
           codpractica:-1
           },
@@ -84,9 +86,9 @@ registra(){
 
 getEstado(estado: number): string{
   if(estado == 1){
-    return "ACTIVO";
+    return "ACEPTADO";
   }else{
-    return "INACTIVO";
+    return "RECHAZADO";
   }
 }
 
@@ -95,13 +97,13 @@ actualizaEstado(aux: Postulacion){
   this.postulacion = aux;
   this.postulacion.estado = aux.estado == 1 ? 0 : 1;
   this.postulacionService.actualizaPostulacion(this.postulacion).subscribe(
-    (response) => {
+    response => {
       console.log(response.mensaje);
       var aux: string = this.filtro.trim() == '' ? 'todos' : this.filtro.trim();
       this.postulacionService
         .consultaPostulacion(aux)
         .subscribe((response) => (this.postulaciones = response));
-      
+        
         (error) =>{
           console.log(error);
         };
@@ -120,6 +122,7 @@ actualiza(){
       this.postulacion = {
         codpostulacion: 0,
         detallepostulante: "",
+        fechapostulacion: new Date(),
         codpractica:{
           codpractica:-1
           },

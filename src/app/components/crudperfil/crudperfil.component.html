@@ -1,266 +1,252 @@
 <html>
 
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>PRACTIQUANT</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRACTIQUANT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Bitter:400,700">
 </head>
 
 <body>
-  <div>
-    <div class="header-dark">
-      <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
-        <div class="container"><a class="navbar-brand">PRACTIQUANT</a><button class="navbar-toggler"
-            data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
+    <div>
+        <div class="header-dark">
+            <nav class="navbar navbar-dark navbar-expand-md navigation-clean-search">
+                <div class="container"><a class="navbar-brand">PRACTIQUANT</a><button class="navbar-toggler" data-toggle="collapse" data-target="#navcol-1"><span class="sr-only">Toggle navigation</span><span
               class="navbar-toggler-icon"></span></button>
-          <div class="collapse navbar-collapse" id="navcol-1">
-            <ul class="nav navbar-nav">
+                    <div class="collapse navbar-collapse" id="navcol-1">
+                        <ul class="nav navbar-nav">
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Perfil
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" routerLink="/perfil">Registra </a>
-                  <a class="dropdown-item" routerLink="/crudPerfil">Mantenimiento</a>
-                </div>
-              </li>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" routerLink="/perfil">Registra </a>
+                                    <a class="dropdown-item" routerLink="/crudPerfil">Mantenimiento</a>
+                                </div>
+                            </li>
 
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Postulación
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" routerLink="/postulacion">Registra </a>
-                  <a class="dropdown-item" routerLink="/crudPostulacion">Mantenimiento</a>
-                </div>
-              </li>
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" routerLink="/postulacion">Registra </a>
+                                    <a class="dropdown-item" routerLink="/crudPostulacion">Mantenimiento</a>
+                                </div>
+                            </li>
 
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Práctica
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" routerLink="/practica">Registra </a>
-                  <a class="dropdown-item" routerLink="/crudPractica">Mantenimiento</a>
-                </div>
-              </li>
-            </ul>
-            <form class="form-inline mr-auto" target="_self">
-              <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input
-                  class="form-control search-field" type="search" name="search" id="search-field"></div>
-            </form><span class="navbar-text"></span><a class="btn btn-light action-button" role="button" href="#"
-              (click)="onLogout()"><i class="fas fa-door-open"></i> Cerrar sesión</a>
-          </div>
-        </div>
-      </nav>
-      <div class="container hero">
-        <div class="row">
-          <div class="col-md-12 ">
-            <h1 class="text-center">ESTÁS EN PRACTIQUANT!</h1>
-
-
-
-            <div class="container">
-
-              <fieldset class="border p-2 bg-white">
-                <legend class="w-auto p-2 bg-white rounded border leyenda">Mantenimiento Perfil</legend>
-
-                <div class="col-md-23" style="margin-top: 3%">
-                  <div class="row" style="height: 80px">
-                    <div class="col-md-4">
-                      <input [(ngModel)]="filtro" class="form-control" id="id_txt_filtro" name="filtro"
-                        placeholder="Ingrese el nombre" type="text" maxlength="30" />
+                                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <a class="dropdown-item" routerLink="/practica">Registra </a>
+                                    <a class="dropdown-item" routerLink="/crudPractica">Mantenimiento</a>
+                                </div>
+                            </li>
+                        </ul>
+                        <form class="form-inline mr-auto" target="_self">
+                            <div class="form-group"><label for="search-field"><i class="fa fa-search"></i></label><input class="form-control search-field" type="search" name="search" id="search-field"></div>
+                        </form><span class="navbar-text"></span><a class="btn btn-light action-button" role="button" href="#" (click)="onLogout()"><i class="fas fa-door-open"></i> Cerrar sesión</a>
                     </div>
-                    <div class="col-md-2">
-                      <button (click)="consulta()" type="button" class="btn btn-primary btn-block" id="id_btn_filtrar">
+                </div>
+            </nav>
+            <div class="container hero">
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <h1 class="text-center">ESTÁS EN PRACTIQUANT!</h1>
+
+
+
+                        <div class="container">
+
+                            <fieldset class="border p-2 bg-white">
+                                <legend class="w-auto p-2 bg-white rounded border leyenda">Mantenimiento Perfil</legend>
+
+                                <div class="col-md-23" style="margin-top: 3%">
+                                    <div class="row" style="height: 80px">
+                                        <div class="col-md-4">
+                                            <input [(ngModel)]="filtro" class="form-control" id="id_txt_filtro" name="filtro" placeholder="Ingrese el nombre" type="text" maxlength="30" />
+                                        </div>
+                                        <div class="col-md-2">
+                                            <button (click)="consulta()" type="button" class="btn btn-primary btn-block" id="id_btn_filtrar">
                         Filtrar
                       </button>
-                    </div>
-                    <div class="col-md-2">
-                    </div>
-                  </div>
+                                        </div>
+                                        <div class="col-md-2">
+                                        </div>
+                                    </div>
 
-                  <div class="row">
-                    <div class="col-md-12">
-                      <div class="content">
-                        <table id="id_table" class="table table-striped table-bordered">
-                          <thead>
-                            <tr>
-                              <th style="width: 5%">Código</th>
-                              <th style="width: 10%">Nombre</th>
-                              <th style="width: 15%">Apellido</th>
-                              <th style="width: 15%">Fecha Nacimiento</th>
-                              <th style="width: 30%">Resumen</th>
-                              <th style="width: 15%">Estado</th>
-                              <th style="width: 7%">Accion</th>
-                              <th style="width: 7%"></th>
-                            </tr>
-                          </thead>
-                          <tbody>
-                            <tr *ngFor="let aux of perfiles">
-                              <td>{{ aux.codperfil}}</td>
-                              <td>{{ aux.nombre }}</td>
-                              <td>{{ aux.apellido }}</td>
-                              <td>{{ aux.fnacim}}</td>
-                              <td>{{ aux.resumen}}</td>
-                              <td *ngIf="aux.estado == 1">
-                                <button (click)="actualizaEstado(aux)" type="button" style="width: 90px"
-                                  class="btn btn-secondary btn-sm" data-toggle="modal"
-                                  data-target="#exampleModalEliminar">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="content">
+                                                <table id="id_table" class="table table-striped table-bordered">
+                                                    <thead>
+                                                        <tr>
+                                                            <th style="width: 5%">Código</th>
+                                                            <th style="width: 10%">Nombre</th>
+                                                            <th style="width: 15%">Apellido</th>
+                                                            <th style="width: 15%">Fecha Nacimiento</th>
+                                                            <th style="width: 30%">Resumen</th>
+                                                            <th style="width: 7%">Estado</th>
+                                                            <th style="width: 7%">Accion</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr *ngFor="let aux of perfiles">
+                                                            <td>{{ aux.codperfil}}</td>
+                                                            <td>{{ aux.nombre }}</td>
+                                                            <td>{{ aux.apellido }}</td>
+                                                            <td>{{ aux.fnacim}}</td>
+                                                            <td>{{ aux.resumen}}</td>
+                                                            <td *ngIf="aux.estado == 1">
+                                                                <button (click)="actualizaEstado(aux)" type="button" style="width: 90px" class="btn btn-secondary btn-sm" data-toggle="modal" data-target="#exampleModalEliminar">
                                   Activo
                                 </button>
-                              </td>
-                              <td *ngIf="aux.estado == 0">
-                                <button (click)="actualizaEstado(aux)" type="button" style="width: 90px"
-                                  class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalEliminar">
+                                                            </td>
+                                                            <td *ngIf="aux.estado == 0">
+                                                                <button (click)="actualizaEstado(aux)" type="button" style="width: 90px" class="btn btn-danger btn-sm" data-toggle="modal" data-target="#exampleModalEliminar">
                                   Inactivo
                                 </button>
-                              </td>
-                              <td>
-                                <button (click)="busca(aux)" type="button" style="width: 90px"
-                                  class="btn btn-primary btn-sm" data-toggle="modal" data-target="#idModalActualizar">
+                                                            </td>
+                                                            <td>
+                                                                <button (click)="busca(aux)" type="button" style="width: 90px" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#idModalActualizar">
                                   Editar
                                 </button>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
+                                                            </td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal fade" id="idModalActualizar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                                    <div class="modal-dialog" style="max-width: 80%">
+                                        <div class="modal-content">
+                                            <div class="modal-header">
+                                                <h5 class="modal-title" id="exampleModalLabel">
+                                                    Actualización de Perfil
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+                                            <div class="modal-body">
+                                                <form class="content" (submit)="actualiza()">
+                                                    <div class="submit-form">
+
+                                                        <div class="mb-3 row">
+                                                            <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control" name="nombre" id="nombre" [(ngModel)]="perfil.nombre" />
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="mb-3 row">
+                                                            <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
+
+                                                            <div class="col-sm-10">
+                                                                <input type="text" class="form-control" name="apellido" id="apellido" [(ngModel)]="perfil.apellido" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="fnacim" class="col-sm-2 col-form-label">Fecha Nacimiento</label>
+                                                            <div class="col-sm-10">
+                                                                <input type="date" class="form-control" name="fnacim" id="fnacim" [(ngModel)]="perfil.fnacim" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="mb-3 row">
+                                                            <label for="resumen" class="col-sm-2 col-form-label">Resumen</label>
+                                                            <div class="col-sm-10">
+                                                                <!--<input type="textarea" class="form-control" name="descripcion" id="descripcion" height="100"  width="100"/>-->
+                                                                <textarea class="form-control" id="resumen" name="resumen" rows="10" cols="50" [(ngModel)]="perfil.resumen"></textarea>
+                                                            </div>
+                                                        </div>
+
+
+
+                                                        <div class="row">
+                                                            <div class="col-lg-12">
+                                                                <button class="btn orange" style="width: 100%;background-color: rgb(9, 5, 29); color: white;">Enviar</button>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </form>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                        </div>
+
                     </div>
-                  </div>
                 </div>
-                <div class="modal fade" id="idModalActualizar" tabindex="-1" aria-labelledby="exampleModalLabel"
-                  aria-hidden="true">
-                  <div class="modal-dialog" style="max-width: 80%">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                          Actualización de Perfil
-                        </h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        <form class="content"  (submit) ="actualiza()">
-                          <div class="submit-form">
-      
-                            <div class="mb-3 row">
-                              <label for="nombre" class="col-sm-2 col-form-label">Nombre</label>
-                              <div class="col-sm-10">
-                                <input type="text" class="form-control" name="nombre" id="nombre"  [(ngModel)] = "perfil.nombre" />
-                              </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+    <footer class="bg-white">
+        <div class="container py-5">
+            <div class="row py-4">
+                <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
+                    <p class="font-italic text-muted">Inicia tu vida laboral con nosotros, tenemos gran variedad de ofertas laborales esperando por ti!</p>
+                    <ul class="list-inline mt-4">
+                        <li class="list-inline-item"><a target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
+                        <li class="list-inline-item"><a target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
+                        <li class="list-inline-item"><a target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">DATOS</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a class="text-muted">Mis postulaciones</a></li>
+                        <li class="mb-2"><a class="text-muted">Curriculum</a></li>
+                        <li class="mb-2"><a class="text-muted">Consejos</a></li>
+                        <li class="mb-2"><a class="text-muted">Información</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">PRANTIQUANT</h6>
+                    <ul class="list-unstyled mb-0">
+                        <li class="mb-2"><a class="text-muted">Login</a></li>
+                        <li class="mb-2"><a class="text-muted">Register</a></li>
+                        <li class="mb-2"><a class="text-muted">Sobre Nosotros</a></li>
+                        <li class="mb-2"><a class="text-muted">Nuestras Ofertas</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-6 mb-lg-0">
+                    <h6 class="text-uppercase font-weight-bold mb-4">Novedades</h6>
+                    <p class="text-muted mb-4">Se publican ofertas laborales todos los días!</p>
+                    <div class="p-1 rounded border">
+                        <div class="input-group">
+                            <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1" class="form-control border-0 shadow-0">
+                            <div class="input-group-append">
+                                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
                             </div>
-      
-                            <div class="mb-5 row">
-                              <label for="apellido" class="col-sm-2 col-form-label">Apellido</label>
-      
-                              <div class="col-sm-10">
-                                <input type="text" class="form-control" name="apellido" id="apellido"  [(ngModel)] = "perfil.apellido" />
-                              </div>
-      
-                              <label for="fnacim" class="col-sm-2 col-form-label">Fecha Nacimiento</label>
-                              <div class="col-sm-10">
-                                <input type="date" class="form-control" name="fnacim" id="fnacim"  [(ngModel)] = "perfil.fnacim" />
-                              </div>
-                            </div>
-                            <div class="mb-3 row">
-                              <label for="resumen" class="col-sm-2 col-form-label">Resumen</label>
-                              <div class="col-sm-10">
-                                <!--<input type="textarea" class="form-control" name="descripcion" id="descripcion" height="100"  width="100"/>-->
-                                <textarea class="form-control" id="resumen" name="resumen" rows="10" cols="50"  [(ngModel)] = "perfil.resumen">
-                                  
-                                  </textarea>
-                              </div>
-                            </div>
-      
-                            <div class="mb-5">
-                              <div class="col-lg-12">
-                                <button class="btn orange"
-                                  style="width: 100%;background-color: rgb(9, 5, 29); color: white;">Enviar</button>
-                              </div>
-                            </div>
-                          </div>
-                        </form>
-                      </div>
+                        </div>
                     </div>
-                  </div>
                 </div>
-
-              </fieldset>
-
             </div>
+        </div>
 
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-  <footer class="bg-white">
-    <div class="container py-5">
-      <div class="row py-4">
-        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0"><img src="img/logo.png" alt="" width="180" class="mb-3">
-          <p class="font-italic text-muted">Inicia tu vida laboral con nosotros, tenemos gran variedad de ofertas
-            laborales esperando por ti!</p>
-          <ul class="list-inline mt-4">
-            <li class="list-inline-item"><a target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
-            <li class="list-inline-item"><a target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
-            <li class="list-inline-item"><a target="_blank" title="instagram"><i class="fa fa-instagram"></i></a></li>
-            <li class="list-inline-item"><a target="_blank" title="pinterest"><i class="fa fa-pinterest"></i></a></li>
-            <li class="list-inline-item"><a target="_blank" title="vimeo"><i class="fa fa-vimeo"></i></a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">DATOS</h6>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a class="text-muted">Mis postulaciones</a></li>
-            <li class="mb-2"><a class="text-muted">Curriculum</a></li>
-            <li class="mb-2"><a class="text-muted">Consejos</a></li>
-            <li class="mb-2"><a class="text-muted">Información</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-2 col-md-6 mb-4 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">PRANTIQUANT</h6>
-          <ul class="list-unstyled mb-0">
-            <li class="mb-2"><a class="text-muted">Login</a></li>
-            <li class="mb-2"><a class="text-muted">Register</a></li>
-            <li class="mb-2"><a class="text-muted">Sobre Nosotros</a></li>
-            <li class="mb-2"><a class="text-muted">Nuestras Ofertas</a></li>
-          </ul>
-        </div>
-        <div class="col-lg-4 col-md-6 mb-lg-0">
-          <h6 class="text-uppercase font-weight-bold mb-4">Novedades</h6>
-          <p class="text-muted mb-4">Se publican ofertas laborales todos los días!</p>
-          <div class="p-1 rounded border">
-            <div class="input-group">
-              <input type="email" placeholder="Enter your email address" aria-describedby="button-addon1"
-                class="form-control border-0 shadow-0">
-              <div class="input-group-append">
-                <button id="button-addon1" type="submit" class="btn btn-link"><i class="fa fa-paper-plane"></i></button>
-              </div>
+        <!-- Copyrights -->
+        <div class="bg-light py-4">
+            <div class="container text-center">
+                <p class="text-muted mb-0 py-2">© 2019 Bootstrapious All rights reserved.</p>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
-
-    <!-- Copyrights -->
-    <div class="bg-light py-4">
-      <div class="container text-center">
-        <p class="text-muted mb-0 py-2">© 2019 Bootstrapious All rights reserved.</p>
-      </div>
-    </div>
-  </footer>
+    </footer>
 </body>
 
 </html>

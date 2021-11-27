@@ -3,9 +3,9 @@ import { Practica } from "./practica.model";
 
 export class Postulacion {
     codpostulacion?: number;
-     detallepostulante?: String;
-     fechapostulacion?:Date;
-     codpractica?: Practica;
-     codperfil?: Perfil;
-     estado? : number;
+    detallepostulante?: String;
+    fechapostulacion?:Date;
+    codpractica?: Practica;
+    codperfil?: Perfil;
+    estado? : number;
 }
